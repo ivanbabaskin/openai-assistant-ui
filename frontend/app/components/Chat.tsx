@@ -46,7 +46,7 @@ const Chat = () => {
     }
   };
 
-  const handleFileUpload = async (event) => {
+  const handleFileUpload = async (event: any) => {
     const file = event.target.files[0];
     if (!file) return;
 
@@ -58,9 +58,9 @@ const Chat = () => {
     }
   };
   const openFileExplorer = () => {
-    fileInputRef.current.click();
+    fileInputRef.current?.click();
   };
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: any) => {
     if (event.key === "Enter" && !event.shiftKey) {
       // When Enter is pressed without Shift, send the message
       event.preventDefault();
@@ -95,7 +95,6 @@ const Chat = () => {
                 <div key={index} className="flex items-start mb-2">
                   <FontAwesomeIcon
                     icon={message.type === "user" ? faUser : faRobot}
-                    alt={message.type}
                     className="mr-2 " // You can adjust the size using width and height attributes or CSS classes
                     style={{ width: "30px", height: "30px" }}
                   />

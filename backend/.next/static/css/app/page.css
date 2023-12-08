@@ -1,0 +1,45 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./app/components/chat.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+/* Add this to your CSS file */
+.typing-indicator {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.1em solid white;
+  white-space: nowrap;
+  animation: typing 1s steps(10, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+/* Styling for the chat message container scrollbar */
+.chat-message-container::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.chat-message-container::-webkit-scrollbar-track {
+  background: #2d2d2d; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.chat-message-container::-webkit-scrollbar-thumb {
+  background: #444; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.chat-message-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
